@@ -1,0 +1,9 @@
+[user]
+	name = Emil Maric
+	email = emil.maric@hotmail.com
+[core]
+	editor = /usr/bin/vim
+[color]
+	ui = true
+[push]
+	default = matching
