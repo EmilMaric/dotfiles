@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/emilmaric/git/yahoo-fantasy-sport/yahoo_fantasy_sports.egg-info'
 let g:netrw_dirhist_2='/Users/emilmaric/git/yahoo-fantasy-sport/yahoo_fantasy_sports'
 let g:netrw_dirhist_3='/Users/emilmaric/git/emilmaric.github.io'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/emilmaric/.nvim'
 let g:netrw_dirhist_6='/Users/emilmaric/.dropbox'
 let g:netrw_dirhist_7='/Users/emilmaric/.pip'
 let g:netrw_dirhist_8='/Users/emilmaric/.pyenv'
+let g:netrw_dirhist_9='/Users/emilmaric/Dropbox/Screenshots'

@@ -33,6 +33,9 @@ set number			        " show line numbers
 " shows row and column number at bottom right
 set ruler
 
+" Add custom font
+set guifont=Menlo\ Regular:h12
+
 " Shows matching searches as you type
 set incsearch
 
@@ -94,6 +97,8 @@ let g:syntastic_check_on_wq = 0
 " Set syntastic python check to use flake8
 let g:syntastic_python_checkers = ['flake8']
 
+" Add a coloured line to the right, to avoid going too far to the right
+set colorcolumn=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MAPPINGS

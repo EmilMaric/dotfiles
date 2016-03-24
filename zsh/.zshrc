@@ -61,6 +61,9 @@ source $ZSH/oh-my-zsh.sh
 # VI mode
 bindkey -v
 
+# Use ESC to unexpand tab-completion
+bindkey '^_' undo
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
