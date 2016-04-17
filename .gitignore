@@ -1,0 +1,5 @@
+# Do not include swap/backup files
+*.swp
+
+# VIM history file
+*.netrwhist

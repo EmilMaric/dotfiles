@@ -6,16 +6,12 @@ set -o vi
 # directory, host name, and more, even over SSH.
 source $HOME/.iterm2_shell_integration.`basename $SHELL`
 
-# Enable colour support for `ls`
-if [ "$TERM" != "dumb" ]; then
-    [ -e "$HOME/.dircolors" ] && export DIR_COLORS="$HOME/.dircolors"
-    [ -e "$DIR_COLORS" ] || DIR_COLORS=""
-    eval "`dircolors -b $DIR_COLORS`"
-fi
-
 # Enable pyenv shims and autocompletion
-if which pyenv > /dev/null; then eval "$pyenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Colourize the output of grep
 export GREP_COLOR='1;37;41'
 export GREP_OPTIONS='--color=auto'
+
+# Set ANDROID_HOME for IntelliJ
+export ANDROID_HOME="/usr/local/opt/android-sdk"

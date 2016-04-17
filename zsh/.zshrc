@@ -64,6 +64,14 @@ bindkey -v
 # Use ESC to unexpand tab-completion
 bindkey '^_' undo
 
+# online help for brew zsh
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
+# Necessary for ZSH completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -88,3 +96,5 @@ bindkey '^_' undo
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
