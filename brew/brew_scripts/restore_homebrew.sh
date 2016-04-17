@@ -97,10 +97,15 @@ install_package zsh-completions ''
 
 # Casks
 install_cask_package basictex
+install_cask_package disk-inventory-x
+install_cask_package flux
 install_cask_package geektool
 install_cask_package google-chrome
 install_cask_package iterm2
 install_cask_package iterm2-nightly
 install_cask_package java
+install_cask_package rescuetime
+install_cask_package slack
+install_cask_package vlc
 
 [ ! -z $failed_items ] && echo The following items were failed to install: && echo $failed_items
