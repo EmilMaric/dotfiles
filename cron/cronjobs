@@ -1,0 +1,1 @@
+* */6 * * * ~/git/dotfiles/brew/brew_scripts/backup_homebrew.sh > ~/git/dotfiles/brew/brew_scripts/restore_homebrew.sh && chmod +x ~/git/dotfiles/brew/brew_scripts/restore_homebrew.sh

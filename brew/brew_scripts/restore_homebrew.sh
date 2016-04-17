@@ -17,6 +17,7 @@ function install_cask_package() {
     [ $? -ne 0 ] && $failed_items="$failed_items $1"  # package failed to install.
 }
 
+# Taps
 /usr/local/bin/brew tap caskroom/cask
 /usr/local/bin/brew tap caskroom/versions
 /usr/local/bin/brew tap homebrew/core
@@ -24,6 +25,7 @@ function install_cask_package() {
 /usr/local/bin/brew tap homebrew/python
 /usr/local/bin/brew tap neovim/neovim
 
+# Formulas
 install_package android-sdk ''
 install_package autoconf ''
 install_package automake ''
@@ -93,6 +95,7 @@ install_package xz ''
 install_package zsh ''
 install_package zsh-completions ''
 
+# Casks
 install_cask_package basictex
 install_cask_package geektool
 install_cask_package google-chrome
