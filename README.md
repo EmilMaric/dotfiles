@@ -32,7 +32,7 @@ Managing your own dotfiles using `stow` is also very easy:
 5. After stowing all your packages, initialize your dotfiles repository as a git repository. For example, I will do `git init ~/git/dotfiles`. Create a repository on GitHub, or whatever hosting service you prefer, and set up yoru local dotfiles repository to point to the remote GitHub repository. Then commit and push your changes.
 6. Now you can clone your GitHub dotfiles repository on your other computers. After cloning, just perform `stow -vRt <target_dir> <package>` on all your packages to bring over your dotfiles. **BE CAREFUL** as this will override any of your local dotfiles, so make sure you copy and save them to a safe location if you are at all worried about losing your old copies. Any time you make any dotfile changes on any of your computers, just commit and push, and then pull these changes on your other computers and re`stow` the package. Very simple!
 
-## ToDo
+## TODO
 * Find a brew cask alternative for:
   * Microsoft OneNote
   * Todoist
