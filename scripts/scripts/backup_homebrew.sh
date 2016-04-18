@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Builds up the list of taps, formulas, and casks that is used
+# to restore homebrew, and generates a script to run through a cronjob.
+
 brew_command=/usr/local/bin/brew
 brew_cask_command="$brew_command cask"
 
