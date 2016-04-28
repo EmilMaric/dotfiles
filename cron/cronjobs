@@ -1,2 +1,3 @@
-* */6 * * * * ~/scripts/backup_homebrew.sh > ~/scripts/restore_homebrew.sh && chmod +x ~/scripts/restore_homebrew.sh
-0 0 * * * * * ~/scripts/delete_screenshots.sh
+* */6 * * * ~/scripts/backup_homebrew.sh > ~/scripts/restore_homebrew.sh && chmod +x ~/scripts/restore_homebrew.sh
+0 0 * * * ~/scripts/delete_screenshots.sh
+

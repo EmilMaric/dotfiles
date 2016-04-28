@@ -49,7 +49,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, virtualenvwrapper)
 
 # User configuration
 
@@ -65,7 +65,6 @@ bindkey -v
 bindkey '^_' undo
 
 # online help for brew zsh
-unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
