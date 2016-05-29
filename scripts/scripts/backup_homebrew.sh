@@ -35,7 +35,7 @@ echo ''
 echo '# Formulas'
 $brew_command list | while read item;
 do
-    echo "install_package $item '$($brew_command info $item | /usr/bin/grep 'Built from source with:' | /usr/bin/sed 's/^[ \t]*Built from source with:/ /g; s/\,/ /g')'"
+    echo "install_package $item '$($brew_command info $item | /usr/bin/grep 'Built from source' | /usr/bin/sed 's/^[ \t]*Built from source on [-0-9]* at [:0-9]*\( with: \)*//g; s/\,/ /g')'"
 done
 echo ''
 
