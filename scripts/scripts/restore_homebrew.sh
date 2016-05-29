@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # AUTO-GENERATED FILE
+# Run this file to restore homebrew
 
 brew_command=/usr/local/bin/brew
 brew_cask_command="$brew_command cask"

@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Builds up the list of taps, formulas, and casks that is used
-# to restore homebrew, and generates a script that is run by a cronjob.
+# Saves all the homebrew taps, formulas, and casks, and generates a script
+# that is used to backup all of these homebrew components. The script can be
+# run to restore homebrew in case you get a new computer and want to transfer
+# over all of your taps, formulas, and casks.
 
 brew_command=/usr/local/bin/brew
 brew_cask_command="$brew_command cask"
@@ -9,6 +11,7 @@ brew_cask_command="$brew_command cask"
 echo '#!/bin/bash'
 echo ''
 echo '# AUTO-GENERATED FILE'
+echo '# Run this file to restore homebrew'
 echo ''
 echo 'brew_command=/usr/local/bin/brew'
 echo 'brew_cask_command="$brew_command cask"'
