@@ -21,6 +21,12 @@ stow -vRt ~/ zsh
 
 You can repeat the `stow` command for any number of packages you want. Additionally, if you would like for `stow` to install the package under a different directory other than the home directory, then just replace the `~/` directory with the directory of your choice.
 
+## Cronjobs
+The `cron` package contains one file called `cronjobs`. This file contains a list of jobs that I let `cron` schedule and run. Anytime I make a change to the `cron/cronjobs` file, or if I'm adding my dotfiles to a new computer, I run the following command to refresh my `crontab`:
+```bash
+crontab cron/cronjobs
+```
+
 ## Setting up your own stow-based dotfiles repository
 Managing your own dotfiles using `stow` is also very easy:
 
