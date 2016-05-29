@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# AUTO-GENERATED FILE
+
 brew_command=/usr/local/bin/brew
 brew_cask_command="$brew_command cask"
 
@@ -35,10 +37,10 @@ install_package coreutils ''
 install_package cscope ''
 install_package ctags ''
 install_package emacs ''
-install_package fontconfig '  --universal'
-install_package freetype '  --universal'
+install_package fontconfig ''
+install_package freetype ''
 install_package gcc ''
-install_package gd '  --universal'
+install_package gd ''
 install_package gdbm ''
 install_package gettext ''
 install_package git ''
@@ -46,30 +48,31 @@ install_package gmp ''
 install_package gnutls ''
 install_package gradle ''
 install_package isl ''
-install_package jasper '  --universal'
-install_package jpeg '  --universal'
+install_package jasper ''
+install_package jpeg ''
 install_package libevent ''
-install_package libgphoto2 '  --universal'
-install_package libicns '  --universal'
+install_package libgphoto2 ''
+install_package libicns ''
 install_package libmpc ''
-install_package libpng '  --universal'
-install_package libtasn1 '  --universal'
-install_package libtiff '  --universal'
-install_package libtool '  --universal'
-install_package libusb '  --universal'
-install_package libusb-compat '  --universal'
-install_package little-cms2 '  --universal'
-install_package macvim '  --with-override-system-vim'
+install_package libpng ''
+install_package libtasn1 ''
+install_package libtiff ''
+install_package libtool ''
+install_package libusb ''
+install_package libusb-compat ''
+install_package little-cms2 ''
+install_package macvim ''
 install_package makedepend ''
 install_package maven ''
 install_package mercurial ''
 install_package mobile-shell ''
+install_package mongodb ''
 install_package mpfr ''
 install_package neo4j ''
 install_package neovim ''
 install_package nettle ''
 install_package node ''
-install_package openssl '  --universal'
+install_package openssl ''
 install_package pcre ''
 install_package pkg-config ''
 install_package portmidi ''
@@ -78,7 +81,7 @@ install_package pyenv ''
 install_package python ''
 install_package python3 ''
 install_package readline ''
-install_package sane-backends '  --universal'
+install_package sane-backends ''
 install_package sdl ''
 install_package sdl_image ''
 install_package sdl_mixer ''
@@ -97,6 +100,7 @@ install_package zsh-completions ''
 
 # Casks
 install_cask_package 1password
+install_cask_package atom
 install_cask_package basictex
 install_cask_package candybar
 install_cask_package disk-inventory-x
@@ -116,4 +120,4 @@ install_cask_package ubersicht
 install_cask_package utorrent
 install_cask_package vlc
 
-[ ! -z $failed_items ] && echo The following items were failed to install: && echo $failed_items
+[ ! -z $failed_items ] && echo The following items failed to install: && echo $failed_items

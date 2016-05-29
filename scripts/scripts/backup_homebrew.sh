@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Builds up the list of taps, formulas, and casks that is used
-# to restore homebrew, and generates a script to run through a cronjob.
+# to restore homebrew, and generates a script that is run by a cronjob.
 
 brew_command=/usr/local/bin/brew
 brew_cask_command="$brew_command cask"
 
 echo '#!/bin/bash'
+echo ''
+echo '# AUTO-GENERATED FILE'
 echo ''
 echo 'brew_command=/usr/local/bin/brew'
 echo 'brew_cask_command="$brew_command cask"'
@@ -44,4 +46,4 @@ do
 done
 echo ''
 
-echo '[ ! -z $failed_items ] && echo The following items were failed to install: && echo $failed_items'
+echo '[ ! -z $failed_items ] && echo The following items failed to install: && echo $failed_items'
