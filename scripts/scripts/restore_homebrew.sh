@@ -46,6 +46,7 @@ install_package gdbm ''
 install_package gettext ''
 install_package git ''
 install_package gmp ''
+install_package gnu-sed ''
 install_package gnutls ''
 install_package gradle ''
 install_package isl ''
@@ -91,17 +92,17 @@ install_package smpeg ''
 install_package sqlite ''
 install_package stow ''
 install_package tmux ''
+install_package tor ''
 install_package tree ''
 install_package unar ''
-install_package webp ''
+install_package webp '--universal'
 install_package wine ''
-install_package xz ''
+install_package xz '--universal'
 install_package zsh ''
 install_package zsh-completions ''
 
 # Casks
 install_cask_package 1password
-install_cask_package atom
 install_cask_package basictex
 install_cask_package candybar
 install_cask_package disk-inventory-x
@@ -113,12 +114,18 @@ install_cask_package intellij-idea-ce
 install_cask_package iterm2
 install_cask_package iterm2-nightly
 install_cask_package java
+install_cask_package osxfuse
 install_cask_package prey
+install_cask_package pycharm-ce
 install_cask_package rescuetime
+install_cask_package robomongo
 install_cask_package slack
-install_cask_package sublime-text3
+install_cask_package sshfs
+install_cask_package sublime-text3 (!)
 install_cask_package ubersicht
 install_cask_package utorrent
+install_cask_package viber
 install_cask_package vlc
+install_cask_package webstorm
 
 [ ! -z $failed_items ] && echo The following items failed to install: && echo $failed_items
