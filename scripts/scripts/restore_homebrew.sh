@@ -21,6 +21,26 @@ function install_cask_package() {
 }
 
 # Taps
+/usr/local/bin/brew tap ==> Auto-updated Homebrew!
+/usr/local/bin/brew tap Updated 1 tap (homebrew/core).
+/usr/local/bin/brew tap ==> Updated Formulae
+/usr/local/bin/brew tap apache-flink
+/usr/local/bin/brew tap fontconfig
+/usr/local/bin/brew tap freetype
+/usr/local/bin/brew tap gd
+/usr/local/bin/brew tap gnutls
+/usr/local/bin/brew tap h2o
+/usr/local/bin/brew tap hadoop
+/usr/local/bin/brew tap imagemagick
+/usr/local/bin/brew tap libbluray
+/usr/local/bin/brew tap libdrawtext
+/usr/local/bin/brew tap notmuch
+/usr/local/bin/brew tap prometheus
+/usr/local/bin/brew tap protobuf
+/usr/local/bin/brew tap simple-tiles
+/usr/local/bin/brew tap swagger-codegen
+/usr/local/bin/brew tap watch
+/usr/local/bin/brew tap 
 /usr/local/bin/brew tap caskroom/cask
 /usr/local/bin/brew tap caskroom/versions
 /usr/local/bin/brew tap homebrew/core
@@ -56,7 +76,8 @@ install_package libevent ''
 install_package libgphoto2 '--universal'
 install_package libicns '--universal'
 install_package libmpc ''
-install_package libpng '--universal'
+install_package libpng '--universal
+--universal'
 install_package libtasn1 '--universal'
 install_package libtiff '--universal'
 install_package libtool '--universal'
@@ -72,6 +93,7 @@ install_package mongodb ''
 install_package mpfr ''
 install_package neo4j ''
 install_package neovim ''
+install_package net-snmp ''
 install_package nettle ''
 install_package node ''
 install_package openssl '--universal'
@@ -83,7 +105,8 @@ install_package pyenv ''
 install_package python ''
 install_package python3 ''
 install_package readline ''
-install_package sane-backends '--universal'
+install_package sane-backends '--universal
+--universal'
 install_package sdl ''
 install_package sdl_image ''
 install_package sdl_mixer ''
