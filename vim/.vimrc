@@ -16,7 +16,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 

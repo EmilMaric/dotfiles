@@ -32,7 +32,14 @@ echo '}'
 echo ''
 
 echo '# Taps'
-$brew_command tap | while read tap; do echo "$brew_command tap $tap"; done
+#$brew_command update
+#$brew_cask_command update
+#$brew_command cleanup -s
+#$brew_cask_command cleanup
+$brew_command tap | while read tap;
+do
+    echo "$brew_command tap $tap";
+done
 echo ''
 
 echo '# Formulas'
