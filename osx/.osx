@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
 # Ask for administrator password upfront
 sudo -v
 
@@ -25,6 +29,15 @@ defaults write com.apple.systemuiserver menuExtras -array \
 
 # Set highlight color to turqoise
 defaults write NSGlobalDomain AppleHighlightColor -string "0.132703 0.986305 0.811329"
+
+# Set Finder sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+# Set the language and text formats
+defaults write NSGlobalDomain AppleLanguages -array "en-CA"
+defaults write NSGlobalDomain AppleLocale -string "en_CA"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1

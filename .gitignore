@@ -3,3 +3,6 @@
 
 # VIM history file
 *.netrwhist
+
+# macOS-specific files
+.DS_Store
