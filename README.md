@@ -41,8 +41,6 @@ Managing your own dotfiles using `stow` is also very easy:
 ## TODO
 * Find a brew cask alternative for:
   * Microsoft OneNote
-  * Todoist
-* Convert cron jobs to launchd scripts
 
 ## References
 1. http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
