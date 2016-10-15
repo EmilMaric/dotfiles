@@ -9,7 +9,6 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -41,7 +40,6 @@ ZSH_THEME="robbyrussell"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -52,14 +50,19 @@ ZSH_THEME="robbyrussell"
 plugins=(git brew virtualenvwrapper)
 
 # User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Library/TeX/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+if [[ "$(uname)" == "Darwin" ]]; then
+    platform="macOS"
+else
+    platform="unknown"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
 # VI mode
 bindkey -v
+
+# Change the backspace key to delete all characters
+bindkey -v '^?' backward-delete-char
 
 # Use ESC to unexpand tab-completion
 bindkey '^_' undo
@@ -70,6 +73,11 @@ HELPDIR=/usr/local/share/zsh/help
 
 # Necessary for ZSH completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# For macOS, use MacVim instead of vim
+if [[ $platform == "macOS" ]]; then
+    alias vim='mvim'
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
