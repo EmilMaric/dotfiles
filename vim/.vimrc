@@ -1,6 +1,5 @@
 " Vundle settings
-set nocompatible		" use VIM improved enhancements for vim
-filetype off			" required for Vundle
+set nocompatible		" use VIM improved enhancements for vim filetype off			" required for Vundle
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,17 +17,16 @@ Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()  
-
 " Enable syntax highlighting
 syntax on
-
 " Load filetype-specific indent files
 filetype plugin indent on
 
 " Show line numbers
 set number
 
-" Shows row and column number at bottom right set ruler
+" Always display the status line for every window
+set laststatus=2
 
 " Shows matching searches as you type
 set incsearch
@@ -48,9 +46,6 @@ set splitbelow
 
 " Set mapleader to be a comma
 let mapleader=","
-
-" Always display the status line for every window
-set laststatus=2
 
 " Set backspace
 set backspace=indent,eol,start
@@ -78,6 +73,22 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+
+" Syntastic Setup
+set statusline=%f\ %h%w%m%r\ 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%=%(%l,%c%V\ %=\ %P%)
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_python_python_exec = "/usr/local/bin/python3"
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
+let g:syntastic_python_checkers = ['flake8']
+
+let g:NERDTreeStatusline = " "
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

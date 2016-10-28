@@ -1,4 +1,4 @@
-PATH=/usr/local/bin:/usr/bin:PATH
+PATH=/usr/local/bin:/usr/bin:/bin
 
 0 */6 * * * /usr/local/bin/brew bundle dump --force ${HOME}/Brewfile
 0 0 * * * ~/scripts/delete_screenshots.sh
