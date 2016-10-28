@@ -1,5 +1,7 @@
 " Vundle settings
-set nocompatible		" use VIM improved enhancements for vim filetype off			" required for Vundle
+" Use VIM improved enhancements for vim
+set nocompatible 
+filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
