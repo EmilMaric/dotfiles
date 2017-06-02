@@ -74,11 +74,6 @@ HELPDIR=/usr/local/share/zsh/help
 # Necessary for ZSH completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# For macOS, use MacVim instead of vim
-if [[ $platform == "macOS" ]]; then
-    alias vim='mvim'
-fi
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

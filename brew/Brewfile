@@ -1,111 +1,100 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/headonly'
-tap 'homebrew/python'
-tap 'homebrew/services'
-tap 'neovim/neovim'
-cask 'java'
-brew 'android-sdk'
-brew 'autoconf'
-brew 'automake'
-brew 'icu4c'
-brew 'boost'
-brew 'libpng', args: ['universal']
-brew 'freetype', args: ['universal']
-brew 'pkg-config'
-brew 'fontconfig', args: ['universal']
-brew 'gettext'
-brew 'libffi'
-brew 'pcre'
-brew 'glib'
-brew 'pixman'
-brew 'cairo'
-brew 'cmake'
-brew 'gmp'
-brew 'coreutils'
-brew 'cscope'
-brew 'ctags'
-brew 'libtasn1', args: ['universal']
-brew 'nettle'
-brew 'gnutls'
-brew 'git'
-brew 'gobject-introspection'
-brew 'jpeg', args: ['universal']
-brew 'xz', args: ['universal']
-brew 'libtiff', args: ['universal']
-brew 'shared-mime-info'
-brew 'gdk-pixbuf'
-brew 'libcroco'
-brew 'harfbuzz'
-brew 'pango'
-brew 'librsvg'
-brew 'emacs'
-brew 'isl'
-brew 'mpfr'
-brew 'libmpc'
-brew 'gcc'
-brew 'webp', args: ['universal']
-brew 'gd', args: ['universal']
-brew 'gdbm'
-brew 'gnu-sed'
-brew 'gradle'
-brew 'jasper', args: ['universal']
-brew 'makedepend'
-brew 'openssl', args: ['universal']
-brew 'libevent'
-brew 'libtool', args: ['universal']
-brew 'libusb', args: ['universal']
-brew 'libusb-compat', args: ['universal']
-brew 'libgphoto2', args: ['universal']
-brew 'libicns', args: ['universal']
-brew 'little-cms2', args: ['universal']
-brew 'readline'
-brew 'sqlite'
-brew 'python'
-brew 'python3'
-brew 'macvim', args: ['with-override-system-vim']
-brew 'maven'
-brew 'mercurial'
-brew 'protobuf'
-brew 'mobile-shell'
-brew 'mongodb'
-brew 'neo4j'
-brew 'net-snmp'
-brew 'node'
-brew 'portmidi'
-brew 'pyenv'
-brew 'sane-backends', args: ['universal']
-brew 'sdl'
-brew 'sdl_image'
-brew 'smpeg'
-brew 'sdl_mixer'
-brew 'sdl_ttf'
-brew 'stow'
-brew 'utf8proc'
-brew 'tmux'
-brew 'tor'
-brew 'tree'
-brew 'unar'
-brew 'wine'
-brew 'zsh'
-brew 'zsh-completions'
-brew 'neovim/neovim/neovim', args: ['HEAD']
-cask '1password'
-cask 'discord'
-cask 'disk-inventory-x'
-cask 'dropbox'
-cask 'firefox'
-cask 'flux'
-cask 'goofy'
-cask 'google-chrome'
-cask 'intellij-idea-ce'
-cask 'iterm2'
-cask 'mongochef'
-cask 'prey'
-cask 'pycharm-ce'
-cask 'rescuetime'
-cask 'viber'
-cask 'vlc'
-cask 'webstorm'
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/headonly"
+tap "homebrew/python"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+tap "neovim/neovim"
+tap "railwaycat/emacsmacport"
+cask "java"
+brew "autoconf"
+brew "automake"
+brew "boost"
+brew "fontconfig", args: ["universal"]
+brew "gettext"
+brew "glib"
+brew "pixman"
+brew "cairo"
+brew "emacs"
+brew "cask"
+brew "cmake"
+brew "coreutils"
+brew "cscope"
+brew "ctags"
+brew "mpfr"
+brew "gcc"
+brew "jpeg", args: ["universal"]
+brew "gd", args: ["universal"]
+brew "gdbm"
+brew "git"
+brew "python"
+brew "gobject-introspection"
+brew "shared-mime-info"
+brew "gdk-pixbuf"
+brew "gnu-sed"
+brew "nettle"
+brew "gnupg"
+brew "gradle"
+brew "harfbuzz"
+brew "htop"
+brew "libtool", args: ["universal"]
+brew "irssi"
+brew "jasper"
+brew "libcroco"
+brew "libevent"
+brew "libgphoto2"
+brew "libicns", args: ["universal"]
+brew "librsvg"
+brew "little-cms2", args: ["universal"]
+brew "python3"
+brew "macvim", args: ["with-override-system-vim"]
+brew "makedepend"
+brew "maven"
+brew "mercurial"
+brew "mobile-shell"
+brew "mongodb"
+brew "neo4j"
+brew "net-snmp"
+brew "nginx"
+brew "node"
+brew "portmidi"
+brew "pyenv"
+brew "sane-backends", args: ["universal"]
+brew "screenfetch"
+brew "sdl"
+brew "sdl_image"
+brew "sdl_mixer"
+brew "sdl_ttf"
+brew "smpeg"
+brew "stow"
+brew "tmux"
+brew "tor"
+brew "tree"
+brew "unar"
+brew "utf8proc"
+brew "wget"
+brew "zsh"
+brew "zsh-completions"
+brew "koekeishiya/formulae/khd"
+brew "koekeishiya/formulae/kwm"
+brew "neovim/neovim/neovim", args: ["HEAD"]
+cask "1password"
+cask "discord"
+cask "disk-inventory-x"
+cask "dropbox"
+cask "emacs"
+cask "firefox"
+cask "flux"
+cask "google-chrome"
+cask "intellij-idea-ce"
+cask "iterm2"
+cask "prey"
+cask "pycharm-ce"
+cask "qbittorrent"
+cask "rescuetime"
+cask "sublime-text"
+cask "viber"
+cask "vlc"
+cask "webstorm"
