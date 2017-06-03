@@ -6,3 +6,6 @@
 
 # macOS-specific files
 .DS_Store
+
+# vim specific folders
+vim/.vim/plugged/
