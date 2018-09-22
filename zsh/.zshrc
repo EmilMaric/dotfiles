@@ -1,11 +1,20 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# Plugins
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+# Let zplug manage zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
+zplug load --verbose
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,7 +65,6 @@ else
     platform="unknown"
 fi
 
-source $ZSH/oh-my-zsh.sh
 
 # VI mode
 bindkey -v
@@ -73,6 +81,24 @@ HELPDIR=/usr/local/share/zsh/help
 
 # Necessary for ZSH completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+
+# Environment Variables
+    export TERM=xterm-256color-italic  # Use custom terminal designed for italic fonts
+
+    # --files: List files that would be searched but do not search
+    # --no-ignore: Do not respect .gitignore, etc...
+    # --hidden: Search hidden files and folders
+    # --follow: Follow symlinks
+    export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+
+    # Add onedark theme DIRCOLORS
+    export CLICOLOR=1
+    export LSCOLORS=ExFxBxDxCxegedabagacad
+
+
+# Load FZF keybindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -100,3 +126,4 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

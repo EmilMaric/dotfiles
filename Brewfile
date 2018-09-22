@@ -1,111 +1,60 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/headonly'
-tap 'homebrew/python'
-tap 'homebrew/services'
-tap 'neovim/neovim'
-cask 'java'
-brew 'android-sdk'
-brew 'autoconf'
-brew 'automake'
-brew 'icu4c'
-brew 'boost'
-brew 'libpng', args: ['universal']
-brew 'freetype', args: ['universal']
-brew 'pkg-config'
-brew 'fontconfig', args: ['universal']
-brew 'gettext'
-brew 'libffi'
-brew 'pcre'
-brew 'glib'
-brew 'pixman'
-brew 'cairo'
-brew 'cmake'
-brew 'gmp'
-brew 'coreutils'
-brew 'cscope'
-brew 'ctags'
-brew 'libtasn1', args: ['universal']
-brew 'nettle'
-brew 'gnutls'
-brew 'git'
-brew 'gobject-introspection'
-brew 'jpeg', args: ['universal']
-brew 'xz', args: ['universal']
-brew 'libtiff', args: ['universal']
-brew 'shared-mime-info'
-brew 'gdk-pixbuf'
-brew 'libcroco'
-brew 'harfbuzz'
-brew 'pango'
-brew 'librsvg'
-brew 'emacs'
-brew 'isl'
-brew 'mpfr'
-brew 'libmpc'
-brew 'gcc'
-brew 'webp', args: ['universal']
-brew 'gd', args: ['universal']
-brew 'gdbm'
-brew 'gnu-sed'
-brew 'gradle'
-brew 'jasper', args: ['universal']
-brew 'makedepend'
-brew 'openssl', args: ['universal']
-brew 'libevent'
-brew 'libtool', args: ['universal']
-brew 'libusb', args: ['universal']
-brew 'libusb-compat', args: ['universal']
-brew 'libgphoto2', args: ['universal']
-brew 'libicns', args: ['universal']
-brew 'little-cms2', args: ['universal']
-brew 'readline'
-brew 'sqlite'
-brew 'python'
-brew 'python3'
-brew 'macvim', args: ['with-override-system-vim']
-brew 'maven'
-brew 'mercurial'
-brew 'protobuf'
-brew 'mobile-shell'
-brew 'mongodb'
-brew 'neo4j'
-brew 'net-snmp'
-brew 'node'
-brew 'portmidi'
-brew 'pyenv'
-brew 'sane-backends', args: ['universal']
-brew 'sdl'
-brew 'sdl_image'
-brew 'smpeg'
-brew 'sdl_mixer'
-brew 'sdl_ttf'
-brew 'stow'
-brew 'utf8proc'
-brew 'tmux'
-brew 'tor'
-brew 'tree'
-brew 'unar'
-brew 'wine'
-brew 'zsh'
-brew 'zsh-completions'
-brew 'neovim/neovim/neovim', args: ['HEAD']
-cask '1password'
-cask 'discord'
-cask 'disk-inventory-x'
-cask 'dropbox'
-cask 'firefox'
-cask 'flux'
-cask 'goofy'
-cask 'google-chrome'
-cask 'intellij-idea-ce'
-cask 'iterm2'
-cask 'mongochef'
-cask 'prey'
-cask 'pycharm-ce'
-cask 'rescuetime'
-cask 'viber'
-cask 'vlc'
-cask 'webstorm'
+tap "beeftornado/rmtree"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/headonly"
+tap "homebrew/python"
+tap "homebrew/services"
+brew "autoconf"
+brew "automake"
+brew "nettle"
+brew "cask"
+brew "coreutils"
+brew "fzf"
+brew "mpfr"
+brew "gcc"
+brew "gettext"
+brew "git"
+brew "htop"
+brew "openssl"
+brew "libevent"
+brew "mongodb"
+brew "neovim"
+brew "pyenv"
+brew "xz"
+brew "python"
+brew "ripgrep"
+brew "stow"
+brew "tmux"
+brew "tor"
+brew "tree"
+brew "wget"
+brew "zplug"
+brew "zsh"
+brew "zsh-completions"
+cask "1password"
+cask "atom"
+cask "chromedriver"
+cask "discord"
+cask "disk-inventory-x"
+cask "dropbox"
+cask "firefox"
+cask "google-chrome"
+cask "intellij-idea-ce"
+cask "iterm2"
+cask "java"
+cask "prey"
+cask "pycharm-ce"
+cask "qbittorrent"
+cask "rescuetime"
+cask "robomongo"
+cask "slack"
+cask "spotify"
+cask "sublime-text"
+cask "telegram"
+cask "viber"
+cask "vlc"
+cask "webstorm"
+cask "whatsapp"
+cask "xquartz"

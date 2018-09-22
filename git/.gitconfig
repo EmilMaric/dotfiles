@@ -2,7 +2,7 @@
 	name = Emil Maric
 	email = emil.maric@hotmail.com
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/nvim
 [color]
 	ui = true
 [push]
