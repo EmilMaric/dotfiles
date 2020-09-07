@@ -1,7 +1,4 @@
 # Dotfiles
-*Note: My dotfiles and setup is tailored for OS X*
-
-## Background
 For me, managing all of my dotfiles across my different computers used to be a difficult and time-consuming task. Using [GNU Stow](https://www.gnu.org/software/stow/), I can now manage all of my dotfiles in a centralized directory. A centralized directory offers the convenience of:
 * organizing my dotfiles into seperate directories, based on their function
 * version-controlling my dotfiles on GitHub
