@@ -45,4 +45,3 @@ let &packpath=&runtimepath
       au TermClose * call feedkeys("\<cr>")
    aug END
 " }
-
