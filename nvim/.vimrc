@@ -7,16 +7,16 @@
    Plug 'ap/vim-css-color' " colourize hex colors
    Plug 'google/vim-searchindex' " show number of matches in search
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-   Plug 'junegunn/fzf.vim'
+   Plug 'junegunn/fzf.vim' " Fuzzy finder for searching files
    Plug 'mhinz/vim-signify' " use the vim gutter to display which lines have changed
    Plug 'scrooloose/nerdcommenter' " powerful commenting plugin
    Plug 'joshdick/onedark.vim' " colorscheme mimicing the atom editor colorscheme
-"   Plug 'airblade/vim-gitgutter' " use vim gutter to display which lines have changed
    call plug#end()
 " }
 
 " GENERAL {
    filetype plugin indent on " load filetype-specific plugins/indent settings
+   set termguicolors " Use 24-bit colors in term buffers
    syntax on " enable syntax highlighting
 " }
 
@@ -31,8 +31,7 @@
                                        " tab starts autocompleting options
    set splitright " open new vertical splits to the right of the current one
    set splitbelow " open new splits below the current one
-   let mapleader="\<Space>" " set mapleader to be a comma
-"   let mapleader="," " set mapleader to be a comma
+   let mapleader="\<Space>" " set mapleader to be a space
    " Disable automatic comment insertion on new lines
    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
    " When git buffers like gitcommit are closed, delete the buffer
@@ -51,29 +50,27 @@
                \ . "> lo<"
                \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
                \ . ">"<CR>
-
-   " open "a4 diff" in vertical split
-   :command! Adiff vnew | setlocal ft=diff | .! a4 diff
-
-   " open "a4 project diff"" in vertical split
-   :command! Apjdiff vnew | setlocal ft=diff | .! a4 project diff
 " }
 
 " UI {
    set t_ut= " tell vim to extend the color scheme's background color across
              " the whole terminal screen
 
-   set termguicolors " Use 24-bit colors in term buffers
+   " Add custom highlighting here since the colorscheme will override/clear it
+   augroup custom-highlighting
+      au!
+
+      " show/highlight trailing spaces and tabs
+      autocmd ColorScheme * call onedark#set_highlight(
+         \ "RedundantSpaces", { "bg": { "cterm": "red", "gui": "red" }})
+      autocmd ColorScheme * match RedundantSpaces /\s\+$/
+   augroup END
+
    let g:onedark_terminal_italics=1 " italicize comments
    colorscheme onedark " colorscheme name
 
-   " show/highlight trailing spaces and tabs
-   highlight RedundantSpaces ctermbg=red guibg=red
-   match RedundantSpaces /\s\+$/
-
    set laststatus=2 " Always display the status line for every window
-   set colorcolumn=86 " display a colored bar at column 86
-   set cursorline " Display a highlighted line on the current line
+   set colorcolumn=80 " display a colored bar at column 80
 " }
 
 " NEOVIM {
@@ -128,10 +125,6 @@
    nmap t <Plug>(easymotion-fl)
    nmap T <Plug>(easymotion-Fl)
 
-   " Remap vim's search to use easymotion's search instead
-   "map / <Plug>(easymotion-sn)
-   "omap / <Plug>(easymotion-tn)
-
    " JK motions: line motions
    nmap <Leader>j <Plug>(easymotion-j)
    nmap <Leader>k <Plug>(easymotion-k)
@@ -142,44 +135,14 @@
 
    " update the signs more quickly
    set updatetime=100
-
-   " by default the colors for the symbols in the git gutter are messed up,
-   " change them up manually
-   highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
-   highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
-   highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
 " }
 
 " NERDCOMMENTER PLUGIN {
    " Add spaces after comment delimiters by default
    let g:NERDSpaceDelims = 1
-
-   " Add your own custom formats or override the defaults
-   let g:NERDCustomDelimiters = { 'tin': { 'left': '//' } }
 " }
 
 " FZF PLUGIN {
-
-   " Customize fzf colors to match your color scheme
-   function! CommonPackages()
-      let l:common_packages_file = "/home/emaric/.common_packages"
-      let l:packages = ""
-      if filereadable( l:common_packages_file ) == 1
-         let l:lines = readfile( l:common_packages_file )
-         for l:line in l:lines
-            let l:packages = l:packages . " /src/" . l:line . "/"
-         endfor
-      endif
-      return l:packages
-   endfunction
-
-   " Add a user-defined `Find` vim command for finding + opening files
-   command! -bang -nargs=* Find call fzf#vim#grep(
-            \ 'rg --vimgrep --fixed-strings --hidden --follow --color="always" '
-            \ . shellescape(<q-args>) . CommonPackages(), 1, <bang>0)
-
    " Map CTRL + F to search for files
    nnoremap <C-F> :Files<CR>
-   " Map CTRL + G to search for content in files
-   nnoremap <C-G> :Find<CR>
 " }
